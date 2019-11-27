@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="jumbotron">
+	<h1>French to English Dictionary</h1>
+		<p class="lead"> Input your word and we will check if our super advanced database has it.
+			To translate an English word, use the <a href="#" target="_top">English to French dictionary<a>.</p>		
+  </div>
+
+  <p>Hello, world!</p>
+
+  <center>
+    <form method="POST" onsubmit="validate(this);" name="lookupform">
+      <p>
+        <img src = "../addons/logo.png" style = "width:40px;height:40px;">
+        <strong>French word</strong>: 
+        <input type="text" name="word" width="120" size="16">
+        <br>
+          <input type="submit" value="Translate to English / Traduire en anglais">
+        <br>
+       <a href="#">English to French</a>
+    </p>
+    </form>
+  </center>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
