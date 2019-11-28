@@ -7,9 +7,6 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,21 +20,36 @@
   <p>Hello, world!</p>
 
   <center>
-    <form method="POST" onsubmit="validate(this);" name="lookupform">
+    <form method="POST" action="" name="lookupform">
       <p>
         <img src = "../addons/logo.png" style = "width:40px;height:40px;">
         <strong>French word</strong>: 
-        <input type="text" name="word" width="120" size="16">
+        <input type="text" name="word" id="1" width="120" size="16">
         <br>
-          <input type="submit" value="Translate to English / Traduire en anglais">
+          <input type="button" id="10" value="Translate to English / Traduire en anglais">
         <br>
        <a href="#">English to French</a>
     </p>
+    
+    <p id = "answer"></p>
     </form>
   </center>
+  
+  <script>
+    var query = document.getElementById("1").value;
+    
+    document.getElementById("10").addEventListener("click", solveQuery);
+    
+    function solveQuery() {
+      if (query === "retard") {
+        document.getElementById("answer").innerHTML = "Word not found. Did you mean 'retarde'?";
+      } else {
+        document.getElementById("answer").innerHTML = "Word not found. Did you mean 'retard'?";
+      }
+    }
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
