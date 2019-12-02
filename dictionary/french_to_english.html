@@ -36,12 +36,11 @@
   </center>
   
   <script>
-    var query = document.getElementById("1").value;
-    
     document.getElementById("10").addEventListener("click", solveQuery);
     
     function solveQuery() {
-      if (query === "retard") {
+      var query = document.getElementById("1").value;
+      if (query.valueOf() == "retard") {
         document.getElementById("answer").innerHTML = "Word not found. Did you mean 'retarde'?";
       } else {
         document.getElementById("answer").innerHTML = "Word not found. Did you mean 'retard'?";
